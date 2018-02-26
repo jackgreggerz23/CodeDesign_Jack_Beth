@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <title>R2D2</title>
+
+    <canvas id="R2D2" width="800" height="800" style="border:1px dotted #000; background-color:black;">
+    </canvas>
+    
+    <body>
+        
+        <script>
+       
+        var c = document.getElementById("R2D2");
+        var ctx = c.getContext("2d");
+        
+        //Body top squares
+        ctx.fillStyle = "#EEEEEE";
+        ctx.fillRect(230,170,40,28);
+        ctx.fillRect(330,170,40,28);
+        
+        //Left leg middle
+        ctx.fillRect(150,302,48,100);
+              
+        //Right leg middle
+        ctx.fillRect(402,302,48,100);
+              
+        //Left foot
+        ctx.beginPath();
+        ctx.moveTo(150,404);
+        ctx.lineTo(198,404);
+        ctx.lineTo(198,500);
+        ctx.lineTo(120,500);
+        ctx.closePath();
+        ctx.fill();
+        
+        //Right foot
+        ctx.beginPath();
+        ctx.moveTo(402,404);
+        ctx.lineTo(450,404);
+        ctx.lineTo(480,500);
+        ctx.lineTo(402,500);
+        ctx.closePath();
+        ctx.fill();
+       
+        //Arse
+        ctx.beginPath();
+        ctx.moveTo(200,452);
+        ctx.lineTo(400,452);
+        ctx.lineTo(350,485);
+        ctx.lineTo(250,485);
+        ctx.closePath();
+        ctx.fill();
+        
+       </script>
+
+    </body>
+
+</html>
