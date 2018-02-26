@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+    
+
+	<title>Football pitch</title>
+
+   
+    <canvas id="footballpitch" width="600" height="400" style="border:1px dotted #000;">
+    </canvas>
+    
+    
+    <body>
+
+   
+    <script>
+        
+        
+    //#20aa0e = Green
+    //#ffffff = White  
+    //#000 = Black
+    //#078503 = Dark green
+
+    var c = document.getElementById("footballpitch");//only needed once
+    var ctx = c.getContext("2d");//only needed once    
+    
+        
+    //Rectangles
+    //Shades of green
+    
+        
+    //Background light green rectangle
+    ctx.fillStyle = "#20aa0e";//The colour goes before the points
+    ctx.fillRect(20, 30, 540,340);//These are the points for the light green rectangle.
+    
+    //Dark green pitch stripes
+    ctx.fillStyle = "#078503";//The colour goes before the points
+    //1
+    ctx.fillRect(40, 30, 20,340);//These are the points for the dark green rectangle.
+   
+    //2
+    ctx.fillRect(80, 30, 20,340);//These are the points for the dark green rectangle. 
+    
+    //3
+    ctx.fillRect(120, 30, 20,340);//These are the points for the dark green rectangle.    
+    
+    //4
+    ctx.fillRect(160, 30, 20,340);//These are the points for the dark green rectangle.
+    
+    //5
+    ctx.fillRect(200, 30, 20,340);//These are the points for the dark green rectangle.    
+    
+    //6
+    ctx.fillRect(240, 30, 20,340);//These are the points for the dark green rectangle.
+    
+    //7
+    ctx.fillRect(280, 30, 20,340);//These are the points for the dark green rectangle.
+       
+    //8
+    ctx.fillRect(320, 30, 20,340);//These are the points for the dark green rectangle.
+    
+    //9
+    ctx.fillRect(360, 30, 20,340);//These are the points for the dark green rectangle.
+    
+    //10
+    ctx.fillRect(400, 30, 20,340);//These are the points for the dark green rectangle.
+    
+    //11
+    ctx.fillRect(440, 30, 20,340);//These are the points for the dark green rectangle.
+    
+    //12 
+    ctx.fillRect(480, 30, 20,340);//These are the points for the dark green rectangle.
+    
+    //13
+    ctx.fillRect(520, 30, 20,340);//These are the points for the dark green rectangle.
+     
+    
+    // Pitch outline
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "#ffffff";//The colour goes before the points
+    ctx.strokeRect(40, 50, 500,300);
+    
+        
+    //Halfway line rectangle    
+    ctx.lineWidth = 4;
+    ctx.strokeRect(40, 50, 250,300);
+        
+        
+   //Left penalty area    
+    ctx.lineWidth = 4;
+    ctx.strokeRect(40, 100, 100,200);
+        
+    
+    //Right penalty area   
+    ctx.lineWidth = 4;
+    ctx.strokeRect(440, 100, 100,200);
+      
+        
+    //Left six yard box    
+    ctx.lineWidth = 4;
+    ctx.strokeRect(40, 150, 50,100);   
+            
+        
+    //Right six yard box    
+    ctx.lineWidth = 4;
+    ctx.strokeRect(490, 150, 50,100); 
+    
+        
+    //Left goal    
+    ctx.lineWidth = 4;
+    ctx.strokeRect(25, 175, 15, 50); 
+        
+        
+    //Right goal    
+    ctx.lineWidth = 4;
+    ctx.strokeRect(540, 175, 15,50);
+     
+        
+        
+    //Arcs.
+        
+
+    //Centre circle
+    ctx.beginPath();
+    ctx.arc(290, 200, 50, 0, 2 * Math.PI);
+    ctx.stroke();   
+    ctx.closePath(); 
+        
+
+    //Left penalty area D
+    ctx.beginPath();
+    ctx.arc(455, 200, 50, 0.6 * Math.PI, 1.4 * Math.PI);
+    ctx.stroke();   
+    ctx.closePath();
+        
+        
+    //Right penalty area D
+    ctx.beginPath();
+    ctx.arc(125, 200, 50, 1.6 * Math.PI, 0.4 * Math.PI);
+    ctx.stroke();   
+    ctx.closePath()
+                
+    
+    //Top left corner
+    ctx.beginPath();
+    ctx.arc(40, 50, 20, 0 * Math.PI, 0.5 * Math.PI);
+    ctx.stroke();   
+    ctx.closePath();
+        
+        
+    //Top right corner
+    ctx.beginPath();
+    ctx.arc(540, 50, 20, 0.5* Math.PI, 1 * Math.PI);
+    ctx.stroke();   
+    ctx.closePath();
+        
+        
+    //Bottom left corner
+    ctx.beginPath();
+    ctx.arc(40, 350, 20, 3.5* Math.PI, 0 * Math.PI);
+    ctx.stroke();   
+    ctx.closePath();
+       
+          
+    //Bottom right corner
+    ctx.beginPath();
+    ctx.arc(540, 350, 20, 5* Math.PI, 1.5 * Math.PI);
+    ctx.stroke();   
+    ctx.closePath();
+        
+    
+    //Centre spot
+    ctx.beginPath();
+    ctx.arc(290, 200, 5, 0, 2 * Math.PI);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.closePath();
+        
+        
+    //Left penalty spot
+    ctx.beginPath();
+    ctx.arc(115, 200, 5, 0, 2 * Math.PI);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.closePath();
+        
+        
+    //Right penalty spot
+    ctx.beginPath();
+    ctx.arc(465, 200, 5, 0, 2 * Math.PI);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.closePath();
+    
+        
+    </script> 
+
+   
+    </body>
+    
+    
+</html>
