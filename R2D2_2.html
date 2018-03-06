@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>R2D2</title>
+
+<canvas id="R2D2" width="600" height="600" style="border:1px dotted #000; background-color:black;">
+</canvas>
+
+<body>
+   
+    <script>
+        
+        var c = document.getElementById("R2D2");
+        var ctx = c.getContext("2d");
+        
+         //START OF HEAD
+        
+        ctx.fillStyle = "#EEEEEE";
+        //Head
+        ctx.beginPath();
+        ctx.arc(300, 150, 100, 1 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle = "#2281DF";
+        //Head top trapezium left
+        ctx.beginPath();
+        ctx.moveTo(262,60);
+        ctx.lineTo(295,60);
+        ctx.lineTo(295,75);
+        ctx.lineTo(236,75);
+        ctx.closePath();
+        ctx.fill();
+        
+        //Head top trapezium right
+        ctx.beginPath();
+        ctx.moveTo(305,60);
+        ctx.lineTo(338,60);
+        ctx.lineTo(364,75);
+        ctx.lineTo(305,75);
+        ctx.closePath();
+        ctx.fill();
+        
+        //Head central trapezium
+        ctx.beginPath();
+        ctx.moveTo(280,80);
+        ctx.lineTo(335,80);
+        ctx.lineTo(345,112);
+        ctx.lineTo(280,112);
+        ctx.closePath();
+        ctx.fill();
+        
+        //Head bottom line trapezium left 
+        ctx.beginPath();
+        ctx.moveTo(207,120);
+        ctx.lineTo(245,120);
+        ctx.lineTo(245,145);
+        ctx.lineTo(203,145);
+        ctx.closePath();
+        ctx.fill();
+        
+        //Head rectangle 1
+        ctx.fillRect(247, 120, 15, 25);
+        
+        //Head rectangle 2
+        ctx.fillRect(264, 120, 15, 25);
+        
+        //Head rectangle 3
+        ctx.fillRect(281, 120, 30, 25);
+        
+        //Head rectangle 4
+        ctx.fillRect(318, 120, 23, 25);
+        
+        //Head rectangle 5
+        ctx.fillRect(343, 120, 20, 25);
+        
+        //Head rectangle 5
+        ctx.fillRect(365, 120, 17, 25);
+        
+        //Head bottom line trapezium right
+        ctx.beginPath();
+        ctx.moveTo(384,120);
+        ctx.lineTo(393,120);
+        ctx.lineTo(398,145);
+        ctx.lineTo(384,145);
+        ctx.closePath();
+        ctx.fill();
+        
+        //Head grey circle outer
+        ctx.fillStyle = "#32363B";
+        ctx.beginPath();
+        ctx.arc(300, 96, 14, 0 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath;
+        
+        //Head black circle inner
+        ctx.fillStyle = "#1D1F20";
+        ctx.strokeStyle = "white";
+        ctx.beginPath();
+        ctx.arc(300, 96, 7, 0 * Math.PI, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath;
+        
+        //Head white circle outer
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(295, 132, 9, 0 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath;
+        
+        //Head red circle inner
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(295, 132, 6, 0 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath;
+        
+        //Head 3 rectangles 
+        ctx.fillStyle = "#EEEEEE";
+        ctx.fillRect(249, 122, 11, 5);
+        ctx.fillRect(249, 130, 11, 5);
+        ctx.fillRect(249, 138, 11, 5);
+        
+        //END OF HEAD
+        
+        
+        //START OF NECK
+        
+        ctx.fillStyle = "#C7C7C7";
+        //Neck
+        ctx.fillRect(200, 152, 200, 46);
+        
+        ctx.fillStyle = "#EEEEEE";
+        //Neck squares
+        ctx.fillRect(230,170,40,28);
+        ctx.fillRect(330,170,40,28);
+        
+        //END OF NECK
+        
+        
+        //START OF BODY
+        
+        ctx.fillStyle = "#EEEEEE";
+        //Body main  
+        ctx.fillRect(200, 200, 200, 250);
+    
+        //Arse
+        ctx.fillStyle = "#EEEEEE";//NOT WORKING??????????????????
+        ctx.beginPath();
+        ctx.moveTo(200,452);
+        ctx.lineTo(400,452);
+        ctx.lineTo(350,485);
+        ctx.lineTo(250,485);
+        ctx.closePath();
+        ctx.fill();
+        
+       
+        //Outline of button panel
+        drawRect(224,209,152,232,"#EEE","#000",1);
+        
+        //Left long thin rectangle (button panel)
+        drawRect(230,215,10,180,"#EEE","#000",1);
+        
+        //Top rectangle (on button panel)
+        drawRect(245,215,125,15,"#EEE","#000",1);
+        
+        //Rectangle underneath top rectnagle (on button panel)
+        drawRect(245, 230, 125, 15, "#EEE","#000",1);
+        
+        //Horizontal rectangle left of centre (on button panel)
+        drawRect(245,250,45,30,"#EEE","#000",1);
+        
+        //Central long thin rectangle (on button panel)
+        drawRect(295,250,22,145,"#EEE","#000",1);
+        
+        //Right vertical box (on button panel)
+        drawRect(322,250,48,145,"#EEE","#000",1);
+        
+        //Vertical rectangle left of centre with rectangle inside (on button panel)
+        drawRect(270,285,20,110,"#7B7B7B","#000",4);
+        
+        //Left hand bottom square (on button panel)
+        drawRect(230,405,30,30,"#7B7B7B","#7B7B7B",1);
+        
+        //Inner rectangle (on button panel)
+        drawRect(275,295,10,90,"#7B7B7B","#000",1);
+        
+        function drawRect(x,y,w,h,f,s,lw) {
+            ctx.beginPath();
+            ctx.strokeRect(x,y,w,h,f,s,lw);
+            ctx.fillRect(x,y,w,h,f,s,lw);
+            ctx.strokeStyle = s;
+            ctx.fillStyle = f;
+            ctx.lineWidth = lw;
+            ctx.closePath();
+        }
+        
+          
+        //END OF BODY
+        
+        
+        //START OF LEGS
+    
+        ctx.fillStyle = "#C7C7C7";
+        //Left leg top
+        ctx.fillRect(150, 200, 48, 100);
+        
+        //Right leg top
+        ctx.fillRect(402, 200, 48, 100);
+        
+        //Left foot bottom
+        ctx.fillRect(120, 502, 78, 20);
+        
+        //Right foot bottom
+        ctx.fillRect(402, 502, 78, 20);
+        
+        ctx.fillStyle = "#EEEEEE";
+        //Left leg middle
+        ctx.fillRect(150,302,48,100);
+              
+        //Right leg middle
+        ctx.fillRect(402,302,48,100);
+              
+        //Left foot
+        ctx.beginPath();
+        ctx.moveTo(150,404);
+        ctx.lineTo(198,404);
+        ctx.lineTo(198,500);
+        ctx.lineTo(120,500);
+        ctx.closePath();
+        ctx.fill();
+        
+        //Right foot
+        ctx.beginPath();
+        ctx.moveTo(402,404);
+        ctx.lineTo(450,404);
+        ctx.lineTo(480,500);
+        ctx.lineTo(402,500);
+        ctx.closePath();
+        ctx.fill();
+        
+        //END OF LEGS
+        
+    
+      
+    </script>
+
+
+</body>
+
+</html>
