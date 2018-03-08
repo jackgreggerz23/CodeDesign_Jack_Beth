@@ -15,6 +15,7 @@
         var ctx = c.getContext("2d");
         
         
+        
         //START OF HEAD
         
         ctx.fillStyle = "#EEEEEE";
@@ -31,17 +32,23 @@
         ctx.lineTo(295,60);
         ctx.lineTo(295,75);
         ctx.lineTo(236,75);
-        ctx.closePath();
         ctx.fill();
+        ctx.closePath();
+        
         
         //Head top trapezium right
-        ctx.beginPath();
-        ctx.moveTo(305,60);
-        ctx.lineTo(338,60);
-        ctx.lineTo(364,75);
-        ctx.lineTo(305,75);
-        ctx.closePath();
-        ctx.fill();
+        
+        function makeShape(xa,ya,xb,){
+            ctx.beginPath();
+            ctx.moveTo(xa,ya);
+            ctx.lineTo(xb,60);
+            ctx.lineTo(364,75);
+            ctx.lineTo(305,75);
+            ctx.fill();
+            ctx.closePath();
+        }
+        makeShape(305,60,338);        
+        
         
         //Head central trapezium
         ctx.beginPath();
@@ -117,86 +124,89 @@
         ctx.arc(295, 132, 6, 0 * Math.PI, 2 * Math.PI);
         ctx.fill();
         ctx.closePath;
+    
         
         //Head 3 rectangles 
-        ctx.fillStyle = "#EEEEEE";
+        ctx.beginPath();
         ctx.fillRect(249, 122, 11, 5);
         ctx.fillRect(249, 130, 11, 5);
         ctx.fillRect(249, 138, 11, 5);
-        
+        ctx.closePath();
         //END OF HEAD
         
         
         //START OF NECK
-        
+        ctx.beginPath();
         ctx.fillStyle = "#C7C7C7";
         //Neck
         ctx.fillRect(200, 152, 200, 46);
         
-        ctx.fillStyle = "#EEEEEE";
+        ctx.fillStyle = "#EEE";
         //Neck squares
         ctx.fillRect(230,170,40,28);
         ctx.fillRect(330,170,40,28);
-        
+        ctx.closePath();
         //END OF NECK
+        
         
         
         //START OF BODY
         
-        ctx.fillStyle = "#EEEEEE";
-        //Body main  
-        ctx.fillRect(200, 200, 200, 250);
-    
-        //Arse
-        ctx.fillStyle = "#EEEEEE";//NOT WORKING??????????????????
+        //DUCKING FIXED IT YEEEEAAAAAHHHHH BOIIIIIIIIII HIGH FIVE
+        function drawRect(x,y,w,h,f,s,lw) {
+            ctx.lineWidth = lw;
+            ctx.beginPath();
+            ctx.fillStyle = f;
+            ctx.strokeStyle = s;
+            ctx.strokeRect(x,y,w,h);
+            ctx.fillRect(x,y,w,h);
+            ctx.closePath();
+        }
+        
+        
+        //Body main
+        drawRect(200,200,200,250,"#EEE","#EEE",1);
+        
+        //Outline of button panel
+        drawRect(224,209,152,232,"#EEE","#000",1);
+        
+        //Left long thin rectangle (button panel)
+        drawRect(230,215,10,180,"pink","#000",1);
+        
+        //Top rectangle (on button panel)
+        drawRect(245,215,125,15,"#C7C","#000",1);
+        
+        //Rectangle underneath top rectangle (on button panel)
+        drawRect(245, 230, 125, 15, "#EEE","#000",1);
+        
+        //Horizontal rectangle left of centre (on button panel)
+        drawRect(245,250,45,30,"#EEE","#000",1);
+        
+        //Central long thin rectangle (on button panel)
+        drawRect(295,250,22,145,"#EEE","#000",1);
+        
+        //Right vertical box (on button panel)
+        drawRect(322,250,48,145,"#EEE","#000",1);
+        
+        //Vertical rectangle left of centre with rectangle inside (on button panel)
+        drawRect(270,285,20,110,"#7B7B7B","#000",4);
+        
+        //Left hand bottom square (on button panel)
+        drawRect(230,405,30,30,"#7B7B7B","green",1);
+        
+        //Inner rectangle (on button panel)
+        drawRect(275,295,10,90,"#7B7B7B","#000",1);
+        
+        //Arse2d2
         ctx.beginPath();
+        ctx.fillStyle = "#EEE";//NOT WORKING??????????????????
         ctx.moveTo(200,452);
         ctx.lineTo(400,452);
         ctx.lineTo(350,485);
         ctx.lineTo(250,485);
-        ctx.closePath();
         ctx.fill();
-        
-        //Outline of button panel
-        ctx.strokeStyle = "black";
-        ctx.strokeRect(224, 209, 152, 232);
-       
-        //Left long thin rectangle (button panel)
-        drawRect(230,215,10,180,"#EEE","#000");
-        
-        //Top rectangle (on button panel)
-        drawRect(245,215,125,15,"#EEE","#000");
-        
-        //Rectangle underneath top rectnagle (on button panel)
-        drawRect(245, 230, 125, 15, "#EEE","#000");
-        
-        //Horizontal rectangle left of centre (on button panel)
-        drawRect(245,250,45,30,"#EEE","#000");
-        
-        //Central long thin rectangle (on button panel)
-        drawRect(295,250,22,145,"#EEE","#000");
-        
-        //Right vertical box (on button panel)
-        drawRect(322,250,48,145,"#EEE","#000");
-        
-        //Vertical rectangle left of centre with rectangle inside (on button panel)
-        drawRect(270,285,20,110,"#EEE","#000");
-        
-        function drawRect(x,y,w,h,f,s) {
-            ctx.strokeRect(x,y,w,h);
-            ctx.strokeStyle = s;
-            ctx.fillStyle = f;
-            ctx.fill();
-        }
-        
-        //Inner rectangle (on button panel)
-        ctx.fillStyle = "#7B7B7B";
-        ctx.strokeStyle = "#000";
-        ctx.lineWidth = 0.5;
-        ctx.fillRect(275, 295, 10, 90);
-        ctx.strokeRect(275, 295, 10, 90);
-        
-        
+        ctx.closePath();
+          
         //END OF BODY
         
         
@@ -243,6 +253,7 @@
         //END OF LEGS
         
     
+      
     </script>
 
 
