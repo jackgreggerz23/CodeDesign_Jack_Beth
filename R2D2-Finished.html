@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>R2D2</title>
+
+<canvas id="R2D2" width="600" height="600" style="border:1px dotted #000; background-color:black;">
+</canvas>
+
+<body>
+   
+    <script>
+        
+        var c = document.getElementById("R2D2");
+        var ctx = c.getContext("2d");
+        
+        function drawRect(x,y,w,h,f,s,lw) {
+            ctx.lineWidth = lw;
+            ctx.beginPath();
+            ctx.fillStyle = f;
+            ctx.strokeStyle = s;
+            ctx.strokeRect(x,y,w,h);
+            ctx.fillRect(x,y,w,h);
+            ctx.closePath();
+        }
+        
+        //START OF NECK
+        
+        //Neck
+        drawRect(200,152,200,46,"#C7C7C7","#EEE",1);
+        
+        //Neck squares
+        drawRect(230,170,40,28,"#EEE","#EEE",1);
+        drawRect(330,170,40,28,"#EEE","#EEE",1);
+        
+        //END OF NECK
+        
+        
+        
+        //START OF BODY
+        
+        //Body main
+        drawRect(200,200,200,250,"#EEE","#000",1);
+              
+        //Outline of button panel
+        drawRect(224,209,152,232,"#EEE","#000",3);
+        
+         //Left long thin rectangle (button panel)
+        drawRect(230,215,10,180,"#EEE","#000",1);
+        
+        //Top rectangle (on button panel)
+        drawRect(245,215,125,15,"#EEE","#000",1);
+        
+        //Blue shape 1 in top two rectangles (on button panel)
+        drawRect(290, 217.5, 60, 8, "#2281DF","#2281DF",1);
+        drawRect(330, 219, 30, 5.5, "#2281DF","#2281DF",1);
+        drawRect(337, 220.5, 30, 2, "#2281DF","#2281DF",1);
+        drawRect(260, 220.5, 30, 2, "#2281DF","#2281DF",1);
+        drawRect(250, 219, 10, 5.5, "#2281DF","#2281DF",1);
+        
+        //Rectangle underneath top rectangle (on button panel)
+        drawRect(245, 230, 125, 15, "#EEE","#000",1);
+        
+        //Blue shape 2 in top two rectangles (on button panel)
+        drawRect(265, 233.5, 60, 8, "#2281DF","#2281DF",1);
+        drawRect(255, 235, 10, 5.5, "#2281DF","#2281DF",1);
+        drawRect(247, 236.5, 15, 2, "#2281DF","#2281DF",1);
+        drawRect(325, 236.5, 30, 2, "#2281DF","#2281DF",1);
+        drawRect(355, 235, 10, 5.5, "#2281DF","#2281DF",1);
+   
+        
+        
+        //Horizontal rectangle left of centre (on button panel)
+        drawRect(245,250,45,30,"#EEE","#000",1);
+        
+        //Central long thin rectangle (on button panel)
+        drawRect(295,250,22,145,"#EEE","#000",1);
+        
+        //Right vertical box (on button panel)
+        drawRect(322,250,48,145,"#EEE","#000",1);
+        
+        //Vertical rectangle left of centre with rectangle inside (on button panel)
+        drawRect(270,285,20,110,"#EEE","#000",2);
+        
+        //Left hand bottom square (on button panel)
+        drawRect(230,405,30,30,"#7B7B7B","#000",4);
+        
+        //Black mini rectangle in square (on button panel)
+        drawRect(230,423,15,5,"#000","#000",1);
+        
+         //Inner rectangle (on button panel)
+        drawRect(275,295,10,90,"#C7C7C7","#000",2);
+        
+        //Left hand bottom rectangle,next to square (on button panel)
+        drawRect(265,423,30,12,"#7B7B7B","#000",4);
+        
+        //Black mini rectangles in left hand bottom rectangle (on button panel)
+        drawRect(270,425,10,1,"#000","#000",1);
+        drawRect(270,432,10,1,"#000","#000",1);
+        drawRect(270,426,1,6,"#000","#000",1);
+        
+        //First bottom rectangle(on button panel)
+        drawRect(265,404,30,8,"#C7C7C7","#C7C7C7",1);
+        
+        //Second bottom rectangle (on button panel)
+        drawRect(300,404,30,8,"#C7C7C7","#C7C7C7",1);
+        
+        //Third bottom rectangle (Longer)(on button panel)
+        drawRect(335,404,38,8,"#C7C7C7","#C7C7C7",1);
+        
+        //Rectangle 1 next to circle (on button panel)
+        drawRect(325,417,20,20,"#EEE","#7B7B7B",3);
+        
+        //Rectangle 2 (on button panel)
+        drawRect(352,417,5,20,"#EEE","#7B7B7B",3);
+        
+        //Rectangle 3 (on button panel)
+        drawRect(365,417,5,20,"#EEE","#7B7B7B",3);
+        
+        //Blue on central long thin rectangle (on button panel)
+        drawRect(299,253,14,139,"#2281DF","#7B7B7B",4);
+        
+        //Grey rectangle 1 on long thin rectangle (on button panel)
+        drawRect(301,258,10,55,"#7B7B7B","#000",3);
+        
+        //Grey rectangle 2 on long thin rectangle (on button panel)
+        drawRect(301,333,10,55,"#7B7B7B","#000",3);
+        
+        //1 of 6 buttons on long thin rectangle (on button panel)
+        drawRect(303.5,260,5,9,"#C7C7C7","#C7C7C7",0.5);
+        
+        //2 of 6 buttons on long thin rectangle (on button panel)
+        drawRect(303.5,280,5,9,"#C7C7C7","#C7C7C7",0.5);
+        
+        //3 of 6 buttons on long thin rectangle (on button panel)
+        drawRect(303.5,300,5,9,"#C7C7C7","#C7C7C7",0.5);
+        
+        //4 of 6 buttons on long thin rectangle (on button panel)
+        drawRect(303.5,335,5,9,"#C7C7C7","#C7C7C7",0.5);
+        
+        //5 of 6 buttons on long thin rectangle (on button panel)
+        drawRect(303.5,355,5,9,"#C7C7C7","#C7C7C7",0.5);
+        
+        //6 of 6 buttons on long thin rectangle (on button panel)
+        drawRect(303.5,375,5,9,"#C7C7C7","#C7C7C7",0.5);
+        //Cicle buttons (on button panel)
+        ctx.beginPath();
+        ctx.arc(310, 426, 10, 0, 2 * Math.PI);
+        ctx.fillStyle = "#000";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+        
+        //Inside circle (on button panel)
+        ctx.beginPath();
+        ctx.arc(310, 426, 5, 0, 2 * Math.PI);
+        ctx.fillStyle = "#7B7B7B";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+        
+        //End of body
+        
+        
+        
+        //START OF HEAD
+        
+        
+        //Head
+        ctx.beginPath();
+        ctx.arc(300, 150, 100, 1 * Math.PI, 2 * Math.PI);
+        ctx.fillStyle = "#EEEEEE";
+        ctx.fill();
+        ctx.closePath();
+        
+        
+        function makeShape(xa,ya,xb,yb,xc,yc,xd,yd,f){
+            ctx.beginPath();
+            ctx.moveTo(xa,ya);
+            ctx.lineTo(xb,yb);
+            ctx.lineTo(xc,yc);
+            ctx.lineTo(xd,yd);
+            ctx.fillStyle = f;
+            ctx.fill();
+            ctx.closePath();
+        }
+        
+        //Head top trapezium left
+        makeShape(262,60,295,60,295,75,236,75,"#2281DF");
+        
+        //Head top trapezium right
+        makeShape(305,60,338,60,364,75,305,75,"#2281DF");        
+        
+        //Head central trapezium
+        makeShape(280,80,335,80,345,112,280,112,"#2281DF");
+       
+        //Head bottom line trapezium left 
+        makeShape(207,120,245,120,245,145,203,145,"#2281DF");
+        
+        //Head bottom line trapezium right
+        makeShape(384,120,393,120,398,145,384,145,"#2281DF");
+       
+        
+        
+        //Head rectangle 1
+        drawRect(247,121,15,23,"#2281DF");
+        
+        
+        //Head rectangle 2
+        
+        drawRect(264, 120, 15, 25,"#2281DF");
+        
+        //Head rectangle 3
+        
+        drawRect(281, 120, 30, 25,"#2281DF");
+        
+        //Head rectangle 4
+        drawRect(318, 120, 23, 25,"#2281DF");
+        
+        //Head rectangle 5
+        drawRect(343, 120, 20, 25,"#2281DF");
+        
+        //Head rectangle 5
+        drawRect(365, 120, 17, 25,"#2281DF");
+        
+        /////Arcs/////
+        
+        //Head grey circle outer
+        ctx.fillStyle = "#32363B";
+        ctx.beginPath();
+        ctx.arc(300, 96, 14, 0 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath;
+        
+        //Head black circle inner
+        ctx.fillStyle = "#1D1F20";
+        ctx.strokeStyle = "white";
+        ctx.beginPath();
+        ctx.arc(300, 96, 7, 0 * Math.PI, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath;
+        
+        //Head white circle outer
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(295, 132, 9, 0 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath;
+        
+        //Head red circle inner
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(295, 132, 6, 0 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath;
+    
+        
+        //Head 3 rectangles 
+        drawRect(249, 122, 11, 5,"#EEE");
+        drawRect(249, 130, 11, 5,"#EEE");
+        drawRect(249, 138, 11, 5,"#EEE");
+        
+        //END OF HEAD
+        
+        
+       
+        //Arse2d2
+        makeShape(200,452,400,452,350,485,250,485,"#EEE");
+        
+          
+        //END OF BODY
+        
+        
+        //START OF LEGS
+    
+       
+        //Left leg top
+        drawRect(150, 200, 48, 100,"#C7C7C7");
+        
+        //Right leg top
+        drawRect(402, 200, 48, 100,"#C7C7C7");
+        
+        //Left foot bottom
+        drawRect(120, 502, 78, 20,"#C7C7C7");
+        
+        //Right foot bottom
+        drawRect(402, 502, 78, 20,"#C7C7C7");
+        
+        
+        //Left leg middle
+        drawRect(150,302,48,100,"#EEEEEE");
+              
+        //Right leg middle
+        drawRect(402,302,48,100,"#EEEEEE");
+              
+        //Left foot
+        makeShape(150,404,198,404,198,500,120,500,"#EEEEEE");
+        
+        
+        //Right foot
+        makeShape(402,404,450,404,480,500,402,500,"#EEEEEE");
+        
+        //END OF LEGS
+        
+    
+      
+    </script>
+
+
+</body>
+
+</html>
