@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>JSON-JavaScript Object Notation.</title>
+    <style>
+    </style>
+</head>
+<body>
+
+<h1 align="center" style="background-color:powderblue;">JSON</h1>
+
+
+<ul>
+    <p> Name:  <span id="name"></span></p> <!--This ID is called by the variable-->
+   
+    <p>Age:  <span id="age"></span></p><!--This ID is called by the variable-->
+  
+    <p>Address:  <span id="street"></span></p><!--This ID is called by the variable-->
+   
+    <p>Email:  <span id="email"></span></p><!--This ID is called by the variable-->
+  
+    <p>Favourite colour:  <span id="colour"></span></p><!--This ID is called by the variable-->
+   
+    <p>Favourite pizza:  <span id="pizza"></span></p><!--This ID is called by the variable-->
+</ul>
+
+<script>
+    
+    
+    var JSONObject= {
+    //The 6 lines below are the word that will appear on the screen by being called to.
+    "name":"Beth Bush",
+        
+    "age":20,
+        
+    "street":"23B Leighton hall, Preston",
+    
+    "email":"bbush1@uclan.ac.uk",
+    
+    "colour":"Pink",
+        
+    "pizza":"Meat feast"};
+    
+    
+
+    document.getElementById("name").innerHTML=JSONObject.name;//Returns the element that has the ID attribute with the value. 
+    
+    document.getElementById("age").innerHTML=JSONObject.age;
+    
+    document.getElementById("street").innerHTML=JSONObject.street;
+    
+    document.getElementById("email").innerHTML=JSONObject.email;
+    
+    document.getElementById("colour").innerHTML=JSONObject.colour;
+    
+    document.getElementById("pizza").innerHTML=JSONObject.pizza;
+    
+    </script>
+
+</body>
+</html>
