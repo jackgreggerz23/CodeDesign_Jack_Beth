@@ -17,11 +17,10 @@
 <body>
 
     <script>
-
         var c = document.getElementById("R2D2"); //calls the id above^
         var ctx = c.getContext("2d"); //2d identifies the type of drawing that will be made. Other types are possible
-
         
+         ///////Both///////
         function drawRect(x,y,w,h,f,s,lw) { //Named the function 'drawRect'. The letter values mirror the values inside the brackets in each instance it is called throughout the page.
             ctx.lineWidth = lw; // the 7th value in method
             ctx.beginPath(); //begins a new line
@@ -31,125 +30,94 @@
             ctx.fillRect(x,y,w,h); // the 1st, 2nd, 3rd and 4th values in the canvas rect() method. Tells the browser to fill the rectangle 
             ctx.closePath(); //joins the start and end coordinates together with a line
         }
-
         
+        
+        ///////Both///////
         //START OF NECK
-
+        
         //Neck
         drawRect(200,152,200,46,"#C7C7C7","#EEE",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Neck squares
         drawRect(230,170,40,28,"#EEE","#EEE",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(330,170,40,28,"#EEE","#EEE",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //END OF NECK
+        
 
-
+        //////Beth//////
         //START OF BODY
-
+        
         //Body main
         drawRect(200,200,200,250,"#EEE","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Outline of button panel
         drawRect(224,209,152,232,"#EEE","#000",3); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
          //Left long thin rectangle (button panel)
         drawRect(230,215,10,180,"#EEE","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-        
         //Top rectangle (on button panel)
         drawRect(245,215,125,15,"#EEE","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Blue shape 1 in top two rectangles (on button panel)
         drawRect(290, 217.5, 60, 8, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(330, 219, 30, 5.5, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(337, 220.5, 30, 2, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(260, 220.5, 30, 2, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(250, 219, 10, 5.5, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Rectangle underneath top rectangle (on button panel)
         drawRect(245, 230, 125, 15, "#EEE","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-        
         //Blue shape 2 in top two rectangles (on button panel)
         drawRect(265, 233.5, 60, 8, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(255, 235, 10, 5.5, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(247, 236.5, 15, 2, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(325, 236.5, 30, 2, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(355, 235, 10, 5.5, "#2281DF","#2281DF",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Horizontal rectangle left of centre (on button panel)
         drawRect(245,250,45,30,"#EEE","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Central long thin rectangle (on button panel)
         drawRect(295,250,22,145,"#EEE","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Right vertical box (on button panel)
         drawRect(322,250,48,145,"#EEE","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Vertical rectangle left of centre with rectangle inside (on button panel)
         drawRect(270,285,20,110,"#EEE","#000",2); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-        
         //Left hand bottom square (on button panel)
         drawRect(230,405,30,30,"#7B7B7B","#000",4); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-        
         //Black mini rectangle in square (on button panel)
         drawRect(230,423,15,5,"#000","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
          //Inner rectangle (on button panel)
         drawRect(275,295,10,90,"#C7C7C7","#000",2); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Left hand bottom rectangle,next to square (on button panel)
         drawRect(265,423,30,12,"#7B7B7B","#000",4); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Black mini rectangles in left hand bottom rectangle (on button panel)
         drawRect(270,425,10,1,"#000","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(270,432,10,1,"#000","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
         drawRect(270,426,1,6,"#000","#000",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //First bottom rectangle(on button panel)
         drawRect(265,404,30,8,"#C7C7C7","#C7C7C7",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Second bottom rectangle (on button panel)
         drawRect(300,404,30,8,"#C7C7C7","#C7C7C7",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-        
         //Third bottom rectangle (Longer)(on button panel)
         drawRect(335,404,38,8,"#C7C7C7","#C7C7C7",1); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Rectangle 1 next to circle (on button panel)
         drawRect(325,417,20,20,"#EEE","#7B7B7B",3); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Rectangle 2 (on button panel)
         drawRect(352,417,5,20,"#EEE","#7B7B7B",3); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-        
         //Rectangle 3 (on button panel)
         drawRect(365,417,5,20,"#EEE","#7B7B7B",3); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Blue on central long thin rectangle (on button panel)
         drawRect(299,253,14,139,"#2281DF","#7B7B7B",4); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Grey rectangle 1 on long thin rectangle (on button panel)
         drawRect(301,258,10,55,"#7B7B7B","#000",3);  //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Grey rectangle 2 on long thin rectangle (on button panel)
         drawRect(301,333,10,55,"#7B7B7B","#000",3);  //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //1 of 6 buttons on long thin rectangle (on button panel)
         drawRect(303.5,260,5,9,"#C7C7C7","#C7C7C7",0.5);  //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //2 of 6 buttons on long thin rectangle (on button panel)
         drawRect(303.5,280,5,9,"#C7C7C7","#C7C7C7",0.5);  //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //3 of 6 buttons on long thin rectangle (on button panel)
         drawRect(303.5,300,5,9,"#C7C7C7","#C7C7C7",0.5);  //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //4 of 6 buttons on long thin rectangle (on button panel)
         drawRect(303.5,335,5,9,"#C7C7C7","#C7C7C7",0.5);  //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //5 of 6 buttons on long thin rectangle (on button panel)
         drawRect(303.5,355,5,9,"#C7C7C7","#C7C7C7",0.5);  //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //6 of 6 buttons on long thin rectangle (on button panel)
         drawRect(303.5,375,5,9,"#C7C7C7","#C7C7C7",0.5);  //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width.
-
         //Cicle buttons (on button panel)
         ctx.beginPath(); //begins a new line
         ctx.arc(310, 426, 10, 0, 2 * Math.PI); //draws a circle, or part of one
@@ -157,7 +125,6 @@
         ctx.fill(); //tells the browser to fill the shape in
         ctx.stroke(); //tells the browser to show the line
         ctx.closePath(); //joins the start and end coordinates together with a line
-
         //Inside circle (on button panel)
         ctx.beginPath(); //begins a new line
         ctx.arc(310, 426, 5, 0, 2 * Math.PI); //draws a circle, or part of one
@@ -165,70 +132,57 @@
         ctx.fill(); //tells the browser to fill the shape in
         ctx.stroke(); //tells the browser to show the line
         ctx.closePath(); //joins the start and end coordinates together with a line
-
         //END OF BODY
-
-
+        
+        
+        //////Jack//////
         //START OF HEAD
-
         //Head
         ctx.beginPath(); //begins a new line
         ctx.arc(300, 150, 100, 1 * Math.PI, 2 * Math.PI); //draws a circle, or part of one
         ctx.fillStyle = "#EEEEEE"; //tells the "ctx.fill();" function what colour to fill the shape
         ctx.fill(); //tells the browser to fill the shape in
         ctx.closePath(); //joins the start and end coordinates together with a line
-
-        function makeShape(xa,ya,xb,yb,xc,yc,xd,yd,f){
-        ctx.beginPath();
-        ctx.moveTo(xa,ya);
-        ctx.lineTo(xb,yb);
-        ctx.lineTo(xc,yc);
-        ctx.lineTo(xd,yd);
-        ctx.fillStyle = f;
-        ctx.fill();
-        ctx.closePath();
+        function makeShape(xa,ya,xb,yb,xc,yc,xd,yd,f){//Named the function 'drawRect'. The letter values mirror the values inside the brackets in each instance it is called throughout the page.
+        ctx.beginPath();//begins a new line.
+        ctx.moveTo(xa,ya);//The 1st and 2nd value. Mirrors the coordinates below.
+        ctx.lineTo(xb,yb);//The 3rd and 4th value. Mirrors the coordinates below.
+        ctx.lineTo(xc,yc);//The 5th and 6th value. Mirrors the coordinates below.
+        ctx.lineTo(xd,yd);//The 7th and 8th value. Mirrors the coordinates below.
+        ctx.fillStyle = f;//The 9th value. Mirrors the colour codes below.
+        ctx.fill();//tells the browser to fill the shape in.
+        ctx.closePath();//joins the start and end coordinates together with a line.
         }
-
+         
         //Head top trapezium left
-        makeShape(262,60,295,60,295,75,236,75,"#2281DF");
-
+        makeShape(262,60,295,60,295,75,236,75,"#2281DF");//calls the function makeShape (above) with the values for xa,ya,xb,yb,xc,yc,xd,yd and f.
         //Head top trapezium right
-        makeShape(305,60,338,60,364,75,305,75,"#2281DF");        
-
+        makeShape(305,60,338,60,364,75,305,75,"#2281DF");//calls the function makeShape (above) with the values for xa,ya,xb,yb,xc,yc,xd,yd and f.        
         //Head central trapezium
-        makeShape(280,80,335,80,345,112,280,112,"#2281DF");
-        
+        makeShape(280,80,335,80,345,112,280,112,"#2281DF");//calls the function makeShape (above) with the values for xa,ya,xb,yb,xc,yc,xd,yd and f.
         //Head bottom line trapezium left 
-        makeShape(207,120,245,120,245,145,203,145,"#2281DF");
-
+        makeShape(207,120,245,120,245,145,203,145,"#2281DF");//calls the function makeShape (above) with the values for xa,ya,xb,yb,xc,yc,xd,yd and f.
         //Head bottom line trapezium right
-        makeShape(384,120,393,120,398,145,384,145,"#2281DF");
+        makeShape(384,120,393,120,398,145,384,145,"#2281DF");//calls the function makeShape (above) with the values for xa,ya,xb,yb,xc,yc,xd,yd and f.
         
         //Head rectangle 1
         drawRect(247,121,15,23,"#2281DF"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Head rectangle 2
         drawRect(264, 120, 15, 25,"#2281DF"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-        
         //Head rectangle 3
         drawRect(281, 120, 30, 25,"#2281DF"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-        
         //Head rectangle 4
         drawRect(318, 120, 23, 25,"#2281DF"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Head rectangle 5
         drawRect(343, 120, 20, 25,"#2281DF"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Head rectangle 5
         drawRect(365, 120, 17, 25,"#2281DF"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Head grey circle outer
         ctx.fillStyle = "#32363B"; //tells the "ctx.fill();" function what colour to fill the shape
         ctx.beginPath(); //begins a new line
         ctx.arc(300, 96, 14, 0 * Math.PI, 2 * Math.PI); //draws a circle, or part of one
         ctx.fill(); //tells the browser to fill the shape in
         ctx.closePath; //joins the start and end coordinates together with a line
-
         //Head black circle inner
         ctx.fillStyle = "#1D1F20"; //tells the "ctx.fill();" function what colour to fill the shape
         ctx.strokeStyle = "white";
@@ -237,62 +191,50 @@
         ctx.stroke();
         ctx.fill(); //tells the browser to fill the shape in
         ctx.closePath; //joins the start and end coordinates together with a line
-
         //Head white circle outer
         ctx.fillStyle = "white"; //tells the "ctx.fill();" function what colour to fill the shape
         ctx.beginPath(); //begins a new line
         ctx.arc(295, 132, 9, 0 * Math.PI, 2 * Math.PI); //draws a circle, or part of one
         ctx.fill(); //tells the browser to fill the shape in
         ctx.closePath; //joins the start and end coordinates together with a line
-
         //Head red circle inner
         ctx.fillStyle = "red"; //tells the "ctx.fill();" function what colour to fill the shape
         ctx.beginPath(); //begins a new line
         ctx.arc(295, 132, 6, 0 * Math.PI, 2 * Math.PI); //draws a circle, or part of one
         ctx.fill(); //tells the browser to fill the shape in
         ctx.closePath; //joins the start and end coordinates together with a line
-
         //Head 3 rectangles 
         drawRect(249, 122, 11, 5,"#EEE"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
         drawRect(249, 130, 11, 5,"#EEE"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
         drawRect(249, 138, 11, 5,"#EEE"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //END OF HEAD
-
         
+        
+        //////Both//////
         //Arse2d2
-        makeShape(200,452,400,452,350,485,250,485,"#EEE");
-
+        makeShape(200,452,400,452,350,485,250,485,"#EEE");//calls the function makeShape (above) with the values for xa,ya,xb,yb,xc,yc,xd,yd and f.
         //END OF BODY
-
         
+        
+        //////Both//////
         //START OF LEGS
-
         //Left leg top
         drawRect(150, 200, 48, 100,"#C7C7C7"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Right leg top
         drawRect(402, 200, 48, 100,"#C7C7C7"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Left foot bottom
         drawRect(120, 502, 78, 20,"#C7C7C7"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Right foot bottom
         drawRect(402, 502, 78, 20,"#C7C7C7"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Left leg middle
         drawRect(150,302,48,100,"#EEEEEE"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Right leg middle
         drawRect(402,302,48,100,"#EEEEEE"); //calls the function drawRect (at top) with the values for x, y, width, height, stroke colour, fill colour and line width
-
         //Left foot
-        makeShape(150,404,198,404,198,500,120,500,"#EEEEEE");
-
+        makeShape(150,404,198,404,198,500,120,500,"#EEEEEE");//calls the function makeShape (above) with the values for xa,ya,xb,yb,xc,yc,xd,yd and f.
         //Right foot
-        makeShape(402,404,450,404,480,500,402,500,"#EEEEEE"); 
+        makeShape(402,404,450,404,480,500,402,500,"#EEEEEE"); //calls the function makeShape (above) with the values for xa,ya,xb,yb,xc,yc,xd,yd and f.
         //END OF LEGS
-
     </script>
 
 </body>

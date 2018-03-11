@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Example - Jack Gregory</title>
+</head>
+<body style="font-family: verdana;">
+
+<h1>JSON Example - Jack Gregory</h1>
+<h2>This is an example of a JSON object with information about me!</h2>
+
+    <b><span id="about"></span></b>
+    <p><b>Name:</b><br><span id="name"></span></p>
+    <p><b>Age:</b><br><span id="age"></span></p>
+    <p><b>University:</b><br><span id="uni"></span></p>
+    <p><b>Contact:</b><br><span id="contact"></span></p>
+    <p><b>Additional information:</b><br><span id="additional"></span></p>
+    
+
+<script>
+    
+    var json= {
+    "about":"ABOUT ME",
+    "name":"Jack Gregory",
+    "age":21,
+    "uni":"UCLan",
+    "contact": "jackgregory37@btinternet.com",
+    "additional": "I am an aspiring web designer"
+    };
+
+document.getElementById("about").innerHTML=json.about;
+document.getElementById("name").innerHTML=json.name;
+document.getElementById("age").innerHTML=json.age;
+document.getElementById("uni").innerHTML=json.uni;
+document.getElementById("contact").innerHTML=json.contact;
+document.getElementById("additional").innerHTML=json.additional;
+
+</script>
+
+</body>
+</html>

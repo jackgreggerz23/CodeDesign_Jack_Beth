@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <title>JSON Example 2 - Jack Gregory</title>
+</head>
+
+<body style="font-family: verdana; font-size: 42%;">
+   
+<br><h1>I have used the example code to create a visual outout using canvas</h1><br>
+    
+<canvas id="jsoncanvas" width="500" height="500"></canvas>
+
+        <script>
+        
+            var canvas = document.getElementById("jsoncanvas"); //grabs the "jsoncanvas" id above^
+            var ctx = canvas.getContext("2d"); //identifies the type of drawing that will be made. Other types are possible
+            var w = canvas.width/2; //canvas width
+            var h = canvas.height/2; //canvas height
+
+            function init(){
+            var JSONObject = JSON.parse( '{"radius": 300, "colour": "red"}' ); //a simple object which identifies the size and colour 
+              ctx.beginPath(); //begins a new line
+              ctx.arc(w,h,JSONObject.radius,0,2*Math.PI); //draws a circle, or part of one
+              ctx.fillStyle = JSONObject["colour"]; //tells the "ctx.fill();" function below what colour to fill the shape
+              ctx.fill(); //tells the browser to fill the shape in. It calls "ctx.fillStyle" for the colour above^
+              ctx.stroke(); //tells the browser to show the line. It calls "ctx.strokeStyle" for the colour above^
+              ctx.closePath(); //joins the start and end coordinates together with a line
+            }
+
+            init(); //initialises
+
+        </script>
+
+</body>
+    
+</html>
