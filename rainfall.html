@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+           
+        <title>RAINFALL</title>
+           
+        <h1>RAINFALL</h1>
+        
+        <p id="data"></p>
+        
+        <canvas id="canvas" width="600" height="600" style="border:2px solid; background-color:#F9F9F9;"></canvas>
+
+        <div id="sales"></div>
+            
+            <body>
+               
+                <script>
+                    
+                    var lastReportTime = 0;
+
+                    window.onload = init;
+
+                    function init() {
+                        var interval = setInterval(handleRefresh, 3000);
+                        handleRefresh();
+                    }
+
+                    function handleRefresh() {
+                        console.log("here");
+                        var url = "http://gumball.wickedlysmart.com" +
+                                    "?callback=updateSales" +
+                                    //"&lastreporttime=" + lastReportTime +
+                                    "&random=" + (new Date()).getTime();
+                        var newScriptElement = document.createElement("script");
+                        newScriptElement.setAttribute("src", url);
+                        newScriptElement.setAttribute("id", "jsonp");
+                        var oldScriptElement = document.getElementById("jsonp");
+                        var head = document.getElementsByTagName("head")[0];
+                        if (oldScriptElement == null) {
+                            head.appendChild(newScriptElement);
+                        }
+                        else {
+                            head.replaceChild(newScriptElement, oldScriptElement);
+                        }
+                    }
+
+                            //Outputting the data into HTML
+                            function updateSales(sales) {
+                            //var salesDiv = document.getElementById("sales"); //loop for outputting data
+                        
+                            var c = document.getElementById("canvas");
+                            var ctx = c.getContext("2d");
+                        
+                            
+                            //Umbrella cover - top
+                            ctx.beginPath();
+                            ctx.fillStyle = "yellow";
+                            ctx.arc(308, 291, 206, 1.1 * Math.PI, 0.002 * Math.PI); 
+                            ctx.fill();
+                            ctx.stroke();
+                            ctx.closePath();
+                        
+                            //Umbrella cover - bottom parts
+                            ctx.beginPath();
+                            ctx.fillStyle = "#F9F9F9";
+                            ctx.arc(140, 314, 90, 1.4 * Math.PI, 1.7 * Math.PI);
+                            ctx.fill();
+                            ctx.stroke();
+                            ctx.closePath();
+                        
+                            ctx.beginPath();
+                            ctx.fillStyle = "#F9F9F9";
+                            ctx.arc(220, 327, 90, 1.4 * Math.PI, 1.7 * Math.PI);
+                            ctx.fill();
+                            ctx.stroke();
+                            ctx.closePath();
+                        
+                            ctx.beginPath();
+                            ctx.fillStyle = "#F9F9F9";
+                            ctx.arc(300, 340, 90, 1.4 * Math.PI, 1.7 * Math.PI);
+                            ctx.fill();
+                            ctx.stroke();
+                            ctx.closePath();
+                        
+                            ctx.beginPath();
+                            ctx.fillStyle = "#F9F9F9";
+                            ctx.arc(380, 353, 90, 1.4 * Math.PI, 1.7 * Math.PI);
+                            ctx.fill();
+                            ctx.stroke();
+                            ctx.closePath();
+                        
+                            ctx.beginPath();
+                            ctx.fillStyle = "#F9F9F9";
+                            ctx.arc(460, 366, 90, 1.4 * Math.PI, 1.7 * Math.PI);
+                            ctx.fill();
+                            ctx.stroke();
+                            ctx.closePath();
+                          
+                            
+                            //Umbrella pole
+                            ctx.beginPath();
+                            ctx.fillStyle = "black";
+                            ctx.moveTo(220, 470);
+                            ctx.lineTo(230, 472);
+                            ctx.lineTo(320, 252);
+                            ctx.lineTo(310, 250);                            
+                            ctx.fill();
+                            ctx.closePath();
+                        
+                        
+                            //Umbrella handle
+                            ctx.beginPath();
+                            ctx.fillStyle = "black";
+                            ctx.arc(212, 462, 20, 0.2, 1.2 * Math.PI);                           
+                            ctx.fill();
+                            ctx.closePath();
+                        
+                            ctx.beginPath();
+                            ctx.fillStyle = "#F9F9F9";
+                            ctx.arc(213, 459, 10, 0.2, 1.2 * Math.PI);                         
+                            ctx.fill();
+                            ctx.closePath();
+                        
+                            
+                        
+                            //Raindrops
+                            function makeRaindrop(x,y){
+                            ctx.beginPath();
+                            ctx.fillStyle = "#5DBCD2";
+                            ctx.fillRect(x,y,4,20);
+                            //ctx.arc(x, y, (r*3), 0, 2 * Math.PI); //circle
+                            ctx.stroke();
+                            ctx.closePath();
+                            }
+                        
+                        
+                        
+                            for (var i = 0; i < sales.length; i++) {
+                            var sale = sales[i]; //Sales array
+                            
+                            var dataFromJson = sale.sales; //Grabbed a copy of the integer
+                            var dataOutput = document.getElementById("data");
+                            dataOutput.innerHTML = dataFromJson;
+                                
+                            function getRandomArbitrary(min, max) {
+                                return Math.random()  * (max - min) + min;
+                            } //random number generated for each loop
+                                
+                            var xPos = getRandomArbitrary(50, 550); //shape can appear horizontally between these coordinates
+                            var yPos = getRandomArbitrary(0, 300); //shape can appear vertically between these coordinates
+                                
+                            makeRaindrop(xPos, yPos, dataFromJson);//integer feeds in here
+                            
+                            
+                            
+                            //The output divs
+                            if (salesDiv.childElementCount == 0) {
+                                salesDiv.appendChild(div);
+                            }
+                            else {
+                                salesDiv.insertBefore(div, salesDiv.firstChild);
+                            }
+                        }
+
+                        if (sales.length > 0) {
+                            lastReportTime = sales[sales.length-1].time;
+                        }
+                    }
+
+                </script>
+                
+
+    </body>
+
+</html>
